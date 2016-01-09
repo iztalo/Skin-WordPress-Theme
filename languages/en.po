@@ -1,0 +1,464 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Skin\n"
+"POT-Creation-Date: 2016-01-06 08:28+0530\n"
+"PO-Revision-Date: 2016-01-06 08:29+0530\n"
+"Last-Translator: Ahmed Kaludi <help@magazine3.com>\n"
+"Language-Team: theSkin.io <ahmed@magazine3.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:8
+msgid "Share your comments"
+msgstr ""
+
+#: comments.php:12 comments.php:28
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:13 comments.php:29
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:14 comments.php:30
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:34
+msgid "Comments are closed."
+msgstr ""
+
+#: elements/featured/featured-1.php:21
+msgid "by"
+msgstr ""
+
+#: elements/featured/featured-1.php:31
+msgid "Featured"
+msgstr ""
+
+#: elements/header/header-1.php:50 elements/header/header-2.php:48
+#: elements/header/header-3.php:52 elements/header/header-4.php:52
+#: functions.php:102
+msgid "Primary Menu"
+msgstr ""
+
+#: elements/home-layout/layout-1.php:41 elements/home-layout/layout-2.php:44
+#: elements/home-layout/layout-3.php:39
+msgid "Previous page"
+msgstr ""
+
+#: elements/home-layout/layout-1.php:42 elements/home-layout/layout-2.php:45
+#: elements/home-layout/layout-3.php:40
+msgid "Next page"
+msgstr ""
+
+#: elements/home-layout/layout-1.php:43 elements/home-layout/layout-2.php:46
+#: elements/home-layout/layout-3.php:41 elements/page-content.php:18
+#: elements/single-layout/layout-1.php:27 image.php:80
+msgid "Page"
+msgstr ""
+
+#: elements/home-layout/layout-1.php:47 elements/home-layout/layout-2.php:50
+#: elements/home-layout/layout-3.php:45
+msgid "Not Found"
+msgstr ""
+
+#: elements/home-layout/layout-1.php:49 elements/home-layout/layout-2.php:52
+#: elements/home-layout/layout-3.php:47
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr ""
+
+#: elements/home-layout/layout-2.php:16
+msgid "in"
+msgstr ""
+
+#: elements/home-layout/layout-2.php:34
+msgid "Continue Reading"
+msgstr ""
+
+#: elements/page-content.php:14 elements/single-layout/layout-1.php:23
+#: image.php:76
+msgid "Pages:"
+msgstr ""
+
+#: elements/related-posts.php:2
+msgid "related posts "
+msgstr ""
+
+#: elements/single-layout/layout-1.php:38
+msgid "share "
+msgstr ""
+
+#: elements/single-layout/layout-1.php:39
+msgid "this"
+msgstr ""
+
+#: elements/single-layout/layout-1.php:76
+msgid "Tagged as "
+msgstr ""
+
+#: elements/single-layout/layout-1.php:83
+msgid "Next"
+msgstr ""
+
+#: elements/single-layout/layout-1.php:84
+msgid "Next post:"
+msgstr ""
+
+#: elements/single-layout/layout-1.php:86
+msgid "Previous"
+msgstr ""
+
+#: elements/single-layout/layout-1.php:87
+msgid "Previous post:"
+msgstr ""
+
+#: functions.php:146
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:148
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:156
+msgid "Footer Widget 1"
+msgstr ""
+
+#: functions.php:158 functions.php:168 functions.php:178
+msgid "Appears in the Footer."
+msgstr ""
+
+#: functions.php:166
+msgid "Footer Widget 2"
+msgstr ""
+
+#: functions.php:176
+msgid "Footer Widget 3"
+msgstr ""
+
+#: functions.php:222
+msgid "Home"
+msgstr ""
+
+#: functions.php:293
+msgid "Error 404"
+msgstr ""
+
+#: functions.php:316
+msgid "published on "
+msgstr ""
+
+#: functions.php:320
+msgid "Edit"
+msgstr ""
+
+#: functions.php:322
+msgid "0 Comments"
+msgstr ""
+
+#: functions.php:322
+msgid "1 Comment"
+msgstr ""
+
+#: functions.php:322
+msgid "% Comment"
+msgstr ""
+
+#: image.php:19 image.php:22 single.php:20 single.php:23
+msgid "you are here"
+msgstr ""
+
+#: image.php:36
+msgid "Previous Image"
+msgstr ""
+
+#: image.php:37
+msgid "Next Image"
+msgstr ""
+
+#: image.php:44
+#, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\">Published on </span> <span "
+"class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></"
+"span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; "
+"%5$s (Full Size Image)</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\" class=\"attachment-post-title\">%8$s</a>"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "General Settings"
+msgstr ""
+
+#: inc/customizer.php:51
+msgid "From this panel you control the General Settings for the theme."
+msgstr ""
+
+#: inc/customizer.php:56
+msgid "Header Style"
+msgstr ""
+
+#: inc/customizer.php:58
+msgid "Ability to change the header style."
+msgstr ""
+
+#: inc/customizer.php:63
+msgid "Featured Area Style"
+msgstr ""
+
+#: inc/customizer.php:65
+msgid "Ability to change the Featured Area style."
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "Post Area Style"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Ability to change the Post Area style."
+msgstr ""
+
+#: inc/customizer.php:78
+msgid "Footer Style"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "Ability to change the Footer style."
+msgstr ""
+
+#: inc/customizer.php:87
+msgid "Site Text Colors"
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "From this panel you control the text and link colors of your site."
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Site Typography"
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "From this panel you control the typography of your site."
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "Single Post Options"
+msgstr ""
+
+#: inc/customizer.php:107
+msgid "From this panel you control the Single Post Options."
+msgstr ""
+
+#: inc/customizer.php:114
+msgid "Footer Options"
+msgstr ""
+
+#: inc/customizer.php:116
+msgid "From this panel you control the Footer Options."
+msgstr ""
+
+#: inc/customizer.php:133
+msgid "Add a image for Header Logo, demo uses 193px*61px"
+msgstr ""
+
+#: inc/customizer.php:146
+msgid "Header Style Selector."
+msgstr ""
+
+#: inc/customizer.php:147
+msgid "Click one of the below images to change the style of the Header area."
+msgstr ""
+
+#: inc/customizer.php:164 inc/customizer.php:298
+msgid "My Control"
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "Featured Style Selector."
+msgstr ""
+
+#: inc/customizer.php:174
+msgid "Click one of the below images to change the style of the Featured area."
+msgstr ""
+
+#: inc/customizer.php:189
+msgid "Post Area on Homepage Style Selector."
+msgstr ""
+
+#: inc/customizer.php:190
+msgid ""
+"Click one of the below images to change the style of the Post Area on "
+"Homepage area."
+msgstr ""
+
+#: inc/customizer.php:205
+msgid "Footer on Homepage Style Selector."
+msgstr ""
+
+#: inc/customizer.php:206
+msgid ""
+"Click one of the below images to change the style of the Footer on Homepage "
+"area."
+msgstr ""
+
+#: inc/customizer.php:221
+msgid "Copyright text"
+msgstr ""
+
+#: inc/customizer.php:222
+msgid "Copyright &copy; - Your Website Name"
+msgstr ""
+
+#: inc/customizer.php:246
+msgid "Enter the Google Analytics Code here."
+msgstr ""
+
+#: inc/customizer.php:247
+msgid ""
+"Here you can enter the Google Analytics code that you get from the analytics "
+"website.."
+msgstr ""
+
+#: inc/customizer.php:265
+msgid ""
+"Select Category(ies) for the top panel of Home page. ( Make sure the "
+"category contains at least 3 posts )"
+msgstr ""
+
+#: inc/customizer.php:266
+msgid "Home Top Category"
+msgstr ""
+
+#: inc/customizer.php:274
+msgid "\"The Latest\" Text"
+msgstr ""
+
+#: inc/customizer.php:275
+msgid "The Latest"
+msgstr ""
+
+#: inc/customizer.php:283
+msgid "Radio-Buttonset Control"
+msgstr ""
+
+#: inc/customizer.php:284
+msgid ""
+"This is a radio control styled as inline buttons. You can use this if you "
+"have few options with short titles that will fit in a single line."
+msgstr ""
+
+#: inc/customizer.php:310
+msgid "Homepage Top Category Post Title Color"
+msgstr ""
+
+#: inc/customizer.php:311
+msgid "Choose a color for Homepage Top Category Post Title Color"
+msgstr ""
+
+#: inc/customizer.php:337
+msgid "Homepage Category Color"
+msgstr ""
+
+#: inc/customizer.php:338
+msgid "Choose a color for the main body of your site"
+msgstr ""
+
+#: inc/customizer.php:364
+msgid "Homepage Post title color"
+msgstr ""
+
+#: inc/customizer.php:365
+msgid "Choose a color for the post title"
+msgstr ""
+
+#: inc/customizer.php:391
+msgid "Homepage Excerpt Color"
+msgstr ""
+
+#: inc/customizer.php:392
+msgid "Choose a color for the Homepage excerpt color"
+msgstr ""
+
+#: inc/customizer.php:417
+msgid "Main Heading Fonts"
+msgstr ""
+
+#: inc/customizer.php:418 inc/customizer.php:468
+msgid "Please choose a typeface for headings."
+msgstr ""
+
+#: inc/customizer.php:442
+msgid "Google-Font subsets for Main Heading Fonts"
+msgstr ""
+
+#: inc/customizer.php:443 inc/customizer.php:493
+msgid "The subsets like latin, greek, etc., "
+msgstr ""
+
+#: inc/customizer.php:467
+msgid "Heading Fonts"
+msgstr ""
+
+#: inc/customizer.php:492
+msgid "Google-Font subsets for Heading Fonts"
+msgstr ""
+
+#: inc/customizer.php:519
+msgid "Social Sharing Below Post Content ON/OFF"
+msgstr ""
+
+#: inc/customizer.php:524 inc/customizer.php:537 inc/customizer.php:550
+msgid "On"
+msgstr ""
+
+#: inc/customizer.php:525 inc/customizer.php:538 inc/customizer.php:551
+msgid "Off"
+msgstr ""
+
+#: inc/customizer.php:532
+msgid "Related Posts ON/OFF"
+msgstr ""
+
+#: inc/customizer.php:545
+msgid "Latest Posts ON/OFF"
+msgstr ""
+
+#: inc/customizer.php:558
+msgid "Related Posts Count."
+msgstr ""
+
+#: inc/customizer.php:572
+msgid "Latest Posts Count."
+msgstr ""
+
+#: inc/kirki/tests/test-kirki.php:55 inc/kirki/tests/test-kirki.php:64
+#: inc/kirki/tests/test-kirki.php:73 inc/kirki/tests/test-kirki.php:131
+msgid "My custom control"
+msgstr ""
+
+#: inc/kirki/tests/test-kirki.php:142
+msgid "My custom control 2"
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""

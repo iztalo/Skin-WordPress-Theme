@@ -1,7 +1,0 @@
-TO DO 
-
-- Default first time activating, Menu is not visible and looks unusable. it shoud have a default menu
-- Navigation dropdown styling
-- If logos are removed then default styling
-- Default fonts
-- Better exceprt / read more for Layout 2

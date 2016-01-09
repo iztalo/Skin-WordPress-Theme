@@ -214,7 +214,7 @@
 }
 .header_4 .main-navigation a {
     outline-offset: -8px;
-    padding: 0px 14px;
+    padding: 0px 14px 10px 14px;
     white-space: nowrap;
     font-size: 16px;
     display: block;

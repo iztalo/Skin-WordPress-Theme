@@ -1,9 +1,9 @@
 /*
 Theme Name: Skin
-Theme URI: http://magazine3.com/technews
-Author: Magazine3
-Author URI: http://magazine3.com/
-Description: Technology WordPress Theme
+Theme URI: http://theskin.io
+Author: Skin
+Author URI: http://theskin.io/
+Description: Multi-purpose OpenSource WordPress theme that is Secure, Lightweight & Flexible.
 Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -373,7 +373,7 @@ display: inline-block;
 }
 .gallery-columns-1 .gallery-item {
     max-width: 100%;
-}
+} 
 .gallery-columns-2 .gallery-item {
     max-width: 48%;
     max-width: calc(50% - 4px);

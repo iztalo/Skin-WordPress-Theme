@@ -47,18 +47,17 @@
 }
 
 /* Main Menu */
+.header_1 .menu-wrapper ul, .header_1 .menu-wrapper ul li{
+    list-style-type: none
+}
 .header_1 .menu-wrapper {
-/*    background: #3A3A3A;*/
+    background: #3A3A3A;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     text-transform: uppercase; 
 }
-.header_1 .menu-wrapper{
-    background-color: #3A3A3A;
-} 
-
 .header_1 .site-header-menu {
-	display: none;
+	display: none; 
 	-webkit-flex: 0 1 100%;
 	-ms-flex: 0 1 100%;
 	-webkit-box-flex: 0;
@@ -89,12 +88,12 @@
 
 .header_1 .main-navigation .current-menu-item > a,
 .header_1 .main-navigation .current-menu-ancestor > a {
-	font-weight: 700;
-}
+ }
 
 .header_1 .main-navigation ul ul {
 	display: none;
 	margin-left: 0.875em;
+    border-bottom: 0px solid #d1d1d1;
 }
 
 .header_1 .no-js .main-navigation ul ul {
@@ -189,8 +188,10 @@
     display: block;
     color: #fff
 }
-.header_1 .main-navigation ul ul {
-    border-bottom: 1px solid #d1d1d1;
+.header_1 .main-navigation ul ul { 
+        -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
     display: block;
     left: -999em;
     margin: 0;
@@ -200,42 +201,61 @@
 .header_1 .main-navigation ul ul ul {
     top: -1px;
 }
+.header_1 .main-navigation ul ul li:hover > ul{
+    right: -175px !important;
+    background: rgb(119, 119, 119);
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+}
+.header_1 .main-navigation ul ul ul li{
+ }
+.header_1 .main-navigation ul ul ul li a{
+    padding: 8px 16px;
+}
 .header_1 .main-navigation ul ul ul:before,
 .header_1 .main-navigation ul ul ul:after {
     border: 0;
 }
-.header_1 .main-navigation ul ul li {
-    background-color: #fff;
-    border: 1px solid #d1d1d1;
+.header_1 .main-navigation ul ul li { 
     border-bottom-width: 0;
+    border: 0px solid #d1d1d1;
 }
 .header_1 .main-navigation ul ul a {
     white-space: normal;
-    width: 12.6875em;
-	color: #1a1a1a;
+    color: #fff;
+    font-size: 14px;
+    padding: 14px 19px;
+    line-height: 1;
+    text-transform: none;
 }
-.header_1 .main-navigation ul ul:before,
-.header_1 .main-navigation ul ul:after {
+.header_1 .main-navigation ul ul:before {
     border-style: solid;
     content: "";
     position: absolute;
 }
 .header_1 .main-navigation ul ul:before {
-    border-color: #d1d1d1 transparent;
-    border-width: 0 10px 10px;
-    right: 9px;
-    top: -9px;
+    border-color: #555 transparent;
+    border-width: 0 6px 6px;
+    left: 20px;
+    top: -6px;
 }
 .header_1 .main-navigation ul ul:after {
-    border-color: #fff transparent;
+   /* border-color: #fff transparent;
     border-width: 0 8px 8px;
     right: 11px;
-    top: -7px;
+    top: -7px;*/
 }
 .header_1 .main-navigation li:hover > ul,
 .header_1 .main-navigation li.focus > ul {
-    left: auto;
-    right: 0;
+    left: 0px;
+    right: 0px;
+    padding: 4px 0px;
+    width: 180px;
+    background: #555;
+    -webkit-border-radius: 0px 0px 3px 3px;
+    -moz-border-radius: 0px 0px 3px 3px;
+    border-radius: 0px 0px 3px 3px; 
 }
 .header_1 .main-navigation ul ul li:hover > ul,
 .header_1 .main-navigation ul ul li.focus > ul {
@@ -244,24 +264,28 @@
 }
 .header_1 .main-navigation .menu-item-has-children > a {
     margin: 0;
-    padding-right: 2.25em;
+    padding-right: 1.75em;
 }
 .header_1 .main-navigation .menu-item-has-children > a:after {
     content: "\f0dd"; 
     font-family:FontAwesome;
-    position: absolute;
-    right: 0.625em;
-    top: 10px;
+    position: absolute;    
+    color: rgba(255, 255, 255, 0.5); 
+    top: 20px; 
+    font-size: 11px;
+    margin-left: 10px
 }
 .header_1 .main-navigation ul ul .menu-item-has-children > a {
     padding-right: 2.0625em;
+    font-size: 14px;
+    text-transform: none;    
 }
 .header_1 .main-navigation ul ul .menu-item-has-children > a:after {
-    right: 0.5625em;
-    top: 10px;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+    right: 1em;
+    top: 16px;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
 }
 
 .header_1 .dropdown-toggle,
@@ -271,3 +295,5 @@
 .header_1 .site-footer .main-navigation {
     display: none;
 }
+
+

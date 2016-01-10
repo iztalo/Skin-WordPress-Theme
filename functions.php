@@ -3,8 +3,7 @@
 function responsive_style() {
     
 	// Add Responsive Style 
-	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/responsive.css', array() );
-    
+	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/responsive.css', array() );   
 }
 
 add_action('wp_footer','responsive_style');

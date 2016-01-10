@@ -36,8 +36,7 @@
 .search-field {
     border-color: #BABDBE !important;
     border-width: 1px 0px 1px 1px; 
-    float: none;
-    width: 168px !important;
+    float: none; 
     font-family: 'Roboto', sans-serif !important;
     height: 32px;
     font-size: 12px !important;
@@ -52,6 +51,9 @@
     letter-spacing: 1px;
     font-weight: 300; 
     text-transform: uppercase;
+}
+.header-search .search-field {
+    width: 168px ;
 }
 .search-submit{
     float: right;
@@ -96,7 +98,7 @@
 }
 
 .header_4 .site-header-menu.toggled-on,
-.no-js .site-header-menu {
+.site-header-menu {
 	display: block;
 }
 

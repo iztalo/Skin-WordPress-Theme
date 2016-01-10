@@ -896,6 +896,10 @@ tbody th{
     color: #e53b2c;
 }
 
+.sidebar-wrapper .search-field {
+    width: 235px ;
+}
+
 /* Sidebar End */
 
 

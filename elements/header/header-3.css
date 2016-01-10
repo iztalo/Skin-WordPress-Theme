@@ -32,8 +32,7 @@
 }
 .search-field {
     border-width: 0px; 
-    float: none;
-    width: 170px !important;
+    float: none; 
     font-family: 'Roboto', sans-serif !important;
     height: 30px;
     font-size: 13px !important;
@@ -46,6 +45,9 @@
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px; 
     font-weight: 300; 
+}
+.header-search .search-field {
+    width: 170px ;
 }
 .search-submit{
     float: right;
@@ -90,7 +92,7 @@
 }
 
 .header_3 .site-header-menu.toggled-on,
-.no-js .site-header-menu {
+.site-header-menu {
 	display: block;
 }
 

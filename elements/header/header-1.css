@@ -18,9 +18,11 @@
 .search-field{
     border-color: #dddddd;
     float: none;
-    width: 235px !important;
     height: 40px;
     font-size: 13px;
+}
+.header-search .search-field {
+    width: 235px ;
 }
 .search-submit{
     float: right;
@@ -65,7 +67,7 @@
 }
 
 .header_1 .site-header-menu.toggled-on,
-.no-js .site-header-menu {
+.layout-1 .site-header-menu {
 	display: block;
 }
 

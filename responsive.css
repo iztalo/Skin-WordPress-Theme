@@ -13,8 +13,8 @@
         width: 90%; 
     }  
     
-    /* Featured Area 1 */
-    .featured_1 .swiper-container {
+    /* Featured Area 1 & 2 */
+    .featured_1 .swiper-container, .featured_2 .swiper-container {
         width: 100%;
         max-width: 100%;
     }

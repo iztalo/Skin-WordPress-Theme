@@ -42,7 +42,7 @@
                 <p><?php echo get_theme_mod( 'footer_copyright','Copyright &copy; - Your Website Name' ) ; ?> </p>
             </div>
             <div class="col-md-4 col-xs-4 footer-credit">
-                <p>Powered by <a href="//skin.io/" target="_blank"> Skin </a></p>
+                <p>Powered by <a href="http://theskin.io" title="Skin WordPress Theme" target="_blank"> Skin</a></p>
             </div>
            </div>    
        </div>   

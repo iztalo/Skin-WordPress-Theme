@@ -91,13 +91,18 @@
     /* Header 1 */
     header .social-icons li  {
         margin-bottom: 10px;
+    } 
+
+    /* Header 2 */
+    .header_2 .top-header .logo  {
+        text-align: center;
     }
-    /*.site-header-menu {
-        display: none !important;
+    .header_2 .search-area {
+        margin-top: 15px;
     }
-    .menu-toggle {
-        display: block ;
-    }*/
+    .header_2 .social-icons {
+        float: left;
+    } 
 
     /* Footer 1  */
     .main-footer .row { 
@@ -146,11 +151,11 @@
 @media screen and (max-width: 551px) {
 
     /* Header 1 */
-    .header_1 .search-area .social-icons {
+     .search-area .social-icons {
         float: none;
         margin-bottom: 20px;
     }
-    .header_1 .header-search {
+     .header-search {
         float: none;
         margin: 0;
     }

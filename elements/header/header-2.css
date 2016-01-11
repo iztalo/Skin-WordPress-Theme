@@ -18,7 +18,7 @@
     color: #F3F3F3
 }
 .header_2 .search-area{
-    margin-top: 5px;
+    margin-top: 3px;
     padding-right: 0px;
     height: 42px;
 }
@@ -83,7 +83,6 @@
     font-weight: 400; 
 }
 .header_2 .site-header-menu {
-	display: none;
 	-webkit-flex: 0 1 100%;
 	-ms-flex: 0 1 100%;
 	-webkit-box-flex: 0;
@@ -340,8 +339,41 @@
 .header_2 .search-submit {
     background: #485058 !important;
 }
-
-
+.social-icons .fa{
+    width: 36px;
+    height: 36px;
+        padding-top: 9px; 
+}
+.social-icons .fa-twitter{
+    padding-left: 10px;
+}
+.social-icons .fa-facebook{
+    padding-left: 13px;
+}
+.social-icons .fa-instagram{
+    padding-left: 10px;
+}
+.social-icons .fa-youtube-play{
+    padding-left: 10px;
+}
+.social-icons .fa-linkedin{
+    padding-left: 11px;
+}
+.social-icons .fa-pinterest{
+    padding-left: 11px;
+}
+.social-icons .fa-google-plus{
+    padding-left: 8px;
+}
+.social-icons .fa-tumblr{
+    padding-left: 12px;
+}
+.social-icons .fa-reddit{
+    padding-left: 10px;
+}
+.social-icons ul{
+    margin: 2px 0 0 0
+}
 /* Social Icons  
 .header_2 .social-icons{
     margin-top: 4px;

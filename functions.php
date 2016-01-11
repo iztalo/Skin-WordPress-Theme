@@ -445,7 +445,6 @@ if ( ! function_exists('skin_header_menu')) {
 	} 
 }
 
-
 /*
  * Social Media Icons for Headers
  *

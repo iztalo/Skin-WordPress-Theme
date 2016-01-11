@@ -82,8 +82,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400; 
 }
-.header_3 .site-header-menu {
-	display: none;
+.header_3 .site-header-menu {  
 	-webkit-flex: 0 1 100%;
 	-ms-flex: 0 1 100%;
 	-webkit-box-flex: 0;

@@ -1,6 +1,6 @@
 /* Header 3 */
 .header_3 .top-header .row {
-    padding: 27px 0; 
+    padding: 30px 0; 
 }
 .header_3 .top-header, .top-header .container{
     background: #fff
@@ -74,7 +74,7 @@
     float: left
 }
 .header_3 .top-header .logo img{
-    height: 42px;
+    height: 65px;
 }
 /* Main Menu */
 .header_3 .menu-wrapper {
@@ -339,6 +339,9 @@
 /* SOCIAL ICONS */
 .header_3 .social-icons{
     float: left
+}
+.header_3 .social-icons ul{
+    margin: 0
 }
 /* Social Icons 
 .header_3 .social-icons{

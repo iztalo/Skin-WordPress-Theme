@@ -409,7 +409,9 @@ if (get_theme_mod('post_area_style_selector', 'skin_1') === 'skin_3') {
       }
     
     // Adding google fonts. Added at in end for performance in mind. Site should not wait for Google fonts to load.
-    wp_enqueue_style( 'skin-google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,500,700', false ); 
+
+    // Added with the id of "kirki_google_fonts" for not to load google font twice while activating SkinToolkit Plugin or Kirki Plugin. 
+    wp_enqueue_style( 'kirki_google_fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,500,700', false ); 
 
      
 // Loading Scripts for the theme 

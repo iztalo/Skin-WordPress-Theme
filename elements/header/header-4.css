@@ -52,7 +52,7 @@
     font-weight: 300; 
     text-transform: uppercase;
 }
-.header-search .search-field {
+.header-search .search-field, .widget_search .search-field {
     width: 168px ;
 }
 .search-submit{

@@ -46,7 +46,7 @@
     border-bottom-left-radius: 2px; 
     font-weight: 300; 
 }
-.header-search .search-field {
+.header-search .search-field, .widget_search .search-field {
     width: 170px ;
 }
 .search-submit{

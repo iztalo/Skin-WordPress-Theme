@@ -19,9 +19,9 @@
     border-color: #dddddd;
     float: none;
     height: 40px;
-    font-size: 13px;
+    font-size: 13px; 
 }
-.header-search .search-field {
+.header-search .search-field, .main-footer .search-field {
     width: 235px ;
 }
 .search-submit{

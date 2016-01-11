@@ -423,7 +423,7 @@ if (get_theme_mod('post_area_style_selector', 'skin_1') === 'skin_3') {
         }
 
     // Load scripts.js to run custom functions
-    wp_enqueue_script( 'scripts-js', get_template_directory_uri() .'/assets/js/scripts.js', array('jquery'), 1.0, true);
+    wp_enqueue_script( 'custom-js', get_template_directory_uri() .'/assets/js/custom.js', array('jquery'), 1.0, true);
     
      // Load Script only on Singular Pages where Comment Form is loaded.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

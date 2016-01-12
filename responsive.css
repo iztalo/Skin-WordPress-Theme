@@ -2,8 +2,7 @@
 @media screen and (max-width: 1149px) {  
     body {
         min-width: 300px;
-    }  
-    
+    }
     .container  {
         width: 90%;
     }
@@ -48,6 +47,14 @@
         margin: 0;
     }
 
+    /* Header 4 */
+    .header_4 .top-header .logo  {
+         max-width: 220px;
+    }
+    .header_4 .social-icons {
+        margin-top: 10px;
+    }
+
     /* 
      Content 
      Layout 1 */
@@ -86,23 +93,76 @@
 
 /* Small devices (tablets, 768px and up) */
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 768px) {
+
+    /* Off Canvas Menu */  
+    #off-canvas-menu  {
+        display: block;
+    }
+    #off-canvas-menu  .search-form{
+        max-width: 100%;
+    } 
 
     /* Header 1 */
     header .social-icons li  {
         margin-bottom: 10px;
-    } 
+    }
+    .header_1 .search-area {
+        display: none;
+    }
+    .home .main-wrapper .container, .main-wrapper .container {
+        padding-top: 0;
+    }
+    .menu-wrapper {
+        display: none;
+    }
+    .header_1 { 
+    }
 
     /* Header 2 */
     .header_2 .top-header .logo  {
         text-align: center;
     }
     .header_2 .search-area {
-        margin-top: 15px;
+        display: none; 
     }
-    .header_2 .social-icons {
-        float: left;
-    } 
+    .header-style-2 .home .main-wrapper, .header-style-2 .main-wrapper {
+        padding-top: 20px;
+    }
+
+    /* Header 3 */
+    .header_3 .top-header .logo {
+        text-align: center;
+        float: none;
+    }
+    .header_3 .social-icons {
+        display: none; 
+    }
+    .header_3 .header-search {
+        display: none;
+    }
+    
+    /* Header 4 */
+    .header_4 .top-header .container {
+        padding: 15px;
+    }
+    .header_4 .top-header .logo  {
+        text-align: center;
+        float: none;
+        max-width: none;
+    }
+    .header_4 .social-icons {
+        display: none;
+    }
+    .header_4 .header-search {
+        display: none;
+    }
+    .header_4 .col-md-4.col-sm-4 {
+        display: none;
+    }
+    .header-style-4 .home .main-wrapper, .header-style-4 .main-wrapper {
+        padding-top: 20px;
+    }
 
     /* Footer 1  */
     .main-footer .row { 
@@ -268,3 +328,4 @@
     }
 
 }
+

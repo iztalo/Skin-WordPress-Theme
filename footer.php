@@ -5,7 +5,10 @@
  * @since Skin 1.0
 */
 ?>
+<!-- 
+    </div>  id="canvas"  
 
+</div>    id="container" -->  
 
 <?php wp_footer(); ?>
 

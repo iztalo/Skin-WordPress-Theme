@@ -11,21 +11,23 @@ get_header(); ?>
 <div class="main-wrapper">
     <div class="container content-holder">
         <div class="row">
+            
             <!-- BrearCrumbs-->
-            <div class="col-md-12 breadcrumb">
                 <?php if ( function_exists('yoast_breadcrumb') ) {
                     $yoast_links_options = get_option( 'wpseo_internallinks' );
                     $yoast_bc_enabled=$yoast_links_options['breadcrumbs-enable'];
                         if ($yoast_bc_enabled) { ?>
+                        <div class="col-md-12 breadcrumb">
                             <span class="breadcrumb_heading"> <?php _e('you are here','skin'); ?></span>
-                            <?php yoast_breadcrumb('<p id="breadcrumbs"> <i class="fa fa-home fa-2x"></i>','</p>');
-                        } else { ?>
+                            <?php yoast_breadcrumb('<p id="breadcrumbs"> <i class="fa fa-home fa-2x"></i>','</p>'); ?>
+                        </div>
+                        <?php } else { ?>
+                        <div class="col-md-12 breadcrumb">
                            <span class="skin_breadcrumb breadcrumb_heading"> <?php _e('you are here','skin'); ?> <i class="fa fa-home fa-2x"></i></span> 
-                            <?php skin_breadcrumb();  
-                        }
+                            <?php skin_breadcrumb();  ?>
+                        </div>
+                        <?php }
                     } ?>  
-               
-           </div>
            <!-- BrearCrumbs-->
             
             <div class="content-wrapper col-md-8">

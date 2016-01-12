@@ -158,12 +158,19 @@ add_action( 'widgets_init', 'skin_theme_widgets_init' );
  * @since Skin 1.0
 */
 function add_layout_class( $classes ) {
-      if ( '2' === get_theme_mod( 'sidebar_switch' ) ) {
-       // array_push( $classes, 'layout-1' );
-      } // end if
-    
-    array_push( $classes, 'layout-1' );
-    
+
+if (get_theme_mod('header_style_selector', 'skin_1') === 'skin_1') {
+	array_push( $classes, 'header-style-1' );
+ }
+if (get_theme_mod('header_style_selector', 'skin_1') === 'skin_2') {  
+	array_push( $classes, 'header-style-2' );
+}
+if (get_theme_mod('header_style_selector', 'skin_1') === 'skin_3') {  
+	array_push( $classes, 'header-style-3' );
+}
+if (get_theme_mod('header_style_selector', 'skin_1') === 'skin_4') {  
+	array_push( $classes, 'header-style-4' ); 
+}
     return $classes;
 }
 add_filter('body_class', 'add_layout_class');

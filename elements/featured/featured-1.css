@@ -7,7 +7,7 @@
     margin-bottom: 50px;
 }
 .featured_1 .swiper-container{ 
-    width: 733px;
+    /*width: 733px;*/
     background: #999
 }
 .swiper-button-next, .swiper-button-prev{

@@ -1565,12 +1565,10 @@ li.comment .comment-respond h3 {
     padding-right: 30px;
     width: 1130px;
 }
-.home .main-wrapper .container  {
-    padding-top: 50px;
-}
+
 .main-wrapper .container  {
-    padding-top: 25px;
-}
+    padding-top: 50px;
+} 
 .sub-footer {
     padding: 0;
 }
@@ -1803,10 +1801,9 @@ ul.sub-posts a {
 .mega-menu-holder .sub-posts .first:hover {
     background: none ;
 }
-
- .mega_menu_parent {
- }
- .mega_menu_parent a{
+.mega_menu_parent {
+}
+.mega_menu_parent a{
     padding-right: 1.75em !important;
 }
 .mega_menu_parent > a:after{
@@ -1819,12 +1816,11 @@ ul.sub-posts a {
     font-size: 11px;
 } 
 .mega-menu-holder .sub-menu{
-
     width: 100% !important;
     background: #F5F5F5 !important;
     padding: 10px 16px 0px 16px !important; 
     border: 1px solid #EAE9E9 !important;  
-   }
+}
 .mega-menu-holder .sub-menu li{
     float: left;
 }
@@ -1832,4 +1828,75 @@ ul.sub-posts a {
     margin-top: 0px
 }
 
+/* Off Canvas Menu */  
+#off-canvas-menu  {
+    display: none;
+}
 
+/* Off Canvas Menu */ 
+#off-canvas-menu .fa-bars {
+    background: #fff;
+    padding: 5px;
+    cursor: pointer;
+}
+#off-canvas-menu {
+    background: #2c3e50;
+    width: 250px;
+    min-height: 100%;
+    top: 0;
+    z-index: 9999;
+    position:fixed;
+}
+#off-canvas-menu  .toggle {
+   top: 0;
+   left: 250px;
+   padding:10px;
+   position: absolute;
+}
+#toggle{
+   display: none;
+}
+/* Pushing the Menu off the canves */
+#off-canvas-menu {
+   left: -250px; /* must be the same as the width of the menu */
+    -webkit-transition: left .500s;
+    transition: left .500s;
+}
+/* Showing the menu then the Checkbox is checked */
+#toggle:checked + #off-canvas-menu {
+   left: 0;
+    -webkit-transition: left .500s; /* Safari 3.1 to 6.0 */
+    transition: left .500s;
+}
+#dropdown-1:checked + #sub-menu {
+   left: 0;
+    -webkit-transition: left .500s; /* Safari 3.1 to 6.0 */
+    transition: left .500s;
+}
+#off-canvas-menu span {
+   display: block;
+   font-size: 22px;
+   margin: 20px 10px;
+} 
+#off-canvas-menu ul li {
+   font-size:19px;
+   border-bottom: 1px solid #2c3e50;
+   list-style: none;
+}
+ 
+#off-canvas-menu ul li a {
+   display: block;
+   padding: 5px;
+   text-decoration: none;
+   color:#fff;
+}
+/* Hiding the checkboxes so only the labels are visible */
+input[id^="dropdown"],
+ul[class^="dropdown"] {
+   display: none;
+}
+ 
+input[id^="dropdown"]:checked + ul[class^="dropdown"] {
+   height: auto;
+   display: block;
+}

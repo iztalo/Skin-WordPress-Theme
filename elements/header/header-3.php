@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row"> 
 
-                <div class="col-md-5">
+                <div class="col-md-5 col-sm-5">
                    <?php
                     // Social Icons
                     if( function_exists( 'skin_social_icons' ) ) {
@@ -11,7 +11,7 @@
                     } ?>
                 </div>
 
-                <div class="col-md-7 search-area">
+                <div class="col-md-7 col-sm-7 search-area">
                     <div class="logo">
                         <?php if ( get_theme_mod( 'header_logo' ) ) : ?>
                     <a href="<?php echo  esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_theme_mod( 'header_logo' ) ; ?>" alt="<?php bloginfo('name'); ?>" /></a>

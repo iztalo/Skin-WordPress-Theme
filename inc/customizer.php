@@ -183,8 +183,8 @@ if ( class_exists( 'Kirki' ) ) {
             'default'     => 'skin_1',
             'priority'    => 10,
             'choices'     => array(
-                'skin_1'   => get_template_directory_uri() . '/images/logo.png',
-                'skin_2' =>   get_template_directory_uri() . '/images/logo.png' 
+                'skin_1'   => get_template_directory_uri() . '/images/featured-one.png',
+                'skin_2' =>   get_template_directory_uri() . '/images/featured-two.png' 
             ),
     );
         
@@ -201,9 +201,9 @@ if ( class_exists( 'Kirki' ) ) {
             'default'     => 'skin_1',
             'priority'    => 10,
             'choices'     => array(
-                'skin_1'   => get_template_directory_uri() . '/images/logo.png',
-                'skin_2' =>   get_template_directory_uri() . '/images/logo.png',
-                'skin_3'  =>  get_template_directory_uri() . '/images/logo.png'
+                'skin_1'   => get_template_directory_uri() . '/images/content-one.png',
+                'skin_2' =>   get_template_directory_uri() . '/images/content-two.png',
+                'skin_3'  =>  get_template_directory_uri() . '/images/content-three.png'
             ),
         );
         

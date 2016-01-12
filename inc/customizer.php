@@ -127,10 +127,10 @@ if ( class_exists( 'Kirki' ) ) {
             'default'     => 'skin_1',
             'priority'    => 10,
             'choices'     => array(
-                'skin_1'   => get_template_directory_uri() . '/images/logo.png',
-                'skin_2' =>   get_template_directory_uri() . '/images/logo.png',
-                'skin_3'  =>  get_template_directory_uri() . '/images/logo.png',
-                'skin_4'  =>  get_template_directory_uri() . '/images/logo.png'
+                'skin_1'   => get_template_directory_uri() . '/images/header-one.png',
+                'skin_2' =>   get_template_directory_uri() . '/images/header-two.png',
+                'skin_3'  =>  get_template_directory_uri() . '/images/header-three.png',
+                'skin_4'  =>  get_template_directory_uri() . '/images/header-four.png'
             ),
         );
         

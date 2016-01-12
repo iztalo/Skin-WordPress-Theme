@@ -7,7 +7,6 @@
  * @since Skin 1.0
  */
 
-
 /**
 * Configure Theme Customizer Panel with Kirki 
 */
@@ -19,7 +18,7 @@ if ( class_exists( 'Kirki' ) ) {
             'logo_image'   => get_template_directory_uri() . '/images/logo.png',
 
             // Only use this if you are bundling the plugin with your theme (see above)
-            'url_path'     => get_stylesheet_directory_uri() . '/inc/kirki/',
+            // 'url_path'     => get_stylesheet_directory_uri() . '/inc/kirki/',
 
             'textdomain'   => 'skin',
 
@@ -145,7 +144,7 @@ if ( class_exists( 'Kirki' ) ) {
             'description' => __( 'To turn on-off featured area site wide.', 'skin' ),
             'section'     => 'featured_style',
             'default'     => '1', 
-            ); 
+        ); 
 
         // 3.2 Featured Area Category Selector
         $fields[] = array(
@@ -206,7 +205,7 @@ if ( class_exists( 'Kirki' ) ) {
                 'skin_2' =>   get_template_directory_uri() . '/images/logo.png',
                 'skin_3'  =>  get_template_directory_uri() . '/images/logo.png'
             ),
-    );
+        );
         
             // 5. Footer
 
@@ -241,7 +240,6 @@ if ( class_exists( 'Kirki' ) ) {
                 ),
             )
         );
-        
         
         // 6. Single 
         
@@ -653,9 +651,6 @@ if ( class_exists( 'Kirki' ) ) {
         ); 
  
         // 3. Typography 
-
-        
-        
         $fields[] = array(
             'type'        => 'select',
             'setting'     => 'skin_typography_heading_font_family',
@@ -692,11 +687,13 @@ if ( class_exists( 'Kirki' ) ) {
                 'max'   => 60,
                 'step'  => 1,
             ),
-            'output' => array(
-                'element'  => '.blog_post h2',
-                'property' => 'font-size',
-                'units'    => 'px',
-            ),
+            'output'      => array(
+                array(
+                    'element'  => '.blog_post h2',
+                    'property' => 'font-size',
+                    'units'    => 'px',
+                ),
+            ), 
             'transport' => 'postMessage', 
             'js_vars'   => array(
                 array(

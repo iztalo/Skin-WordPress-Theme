@@ -417,10 +417,8 @@ if (get_theme_mod('post_area_style_selector', 'skin_1') === 'skin_3') {
     // Loading BootStarp.min.js 
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() .'/assets/js/bootstrap.min.js', array('jquery'), 1.0, true);
     
-    // Load Script only on HomePage for Swiper Slider
-    if(is_home()){
-        wp_enqueue_script( 'swiperslider', get_template_directory_uri() .'/assets/js/swiper.min.js', array('jquery'), 1.0, true);
-        }
+    // Load Script for Swiper Slider
+    wp_enqueue_script( 'swiperslider', get_template_directory_uri() .'/assets/js/swiper.min.js', array('jquery'), 1.0, true);
 
     // Load scripts.js to run custom functions
     wp_enqueue_script( 'custom-js', get_template_directory_uri() .'/assets/js/custom.js', array('jquery'), 1.0, true);
@@ -457,45 +455,45 @@ if ( ! function_exists('skin_header_menu')) {
 if( ! function_exists( 'skin_social_icons' ) ){
     function skin_social_icons() { 
         $icon_style = get_theme_mod('skin_icon_style','icon_type_round'); ?>
-<div class="social-icons <?php echo $icon_style; ?>">
-<ul>
-<?php if ( get_theme_mod( 'skin_twitter_on_off','1' ) == '1' ) { ?>
-    <li><a href="<?php echo get_theme_mod( 'skin_twitter_link','#' )?>"><i class="fa fa-twitter fa-2x"></i></a></li>
-<?php } ?>
+	<div class="social-icons <?php echo $icon_style; ?>">
+		<ul>
+			<?php if ( get_theme_mod( 'skin_twitter_on_off','1' ) == '1' ) { ?>
+			    <li><a href="<?php echo get_theme_mod( 'skin_twitter_link','#' )?>"><i class="fa fa-twitter fa-2x"></i></a></li>
+			<?php } ?>
 
-<?php if ( get_theme_mod( 'skin_facebook_on_off','1' ) == '1' ) { ?>
-    <li><a href="<?php echo get_theme_mod( 'skin_facebook_link','#' )?>"><i class="fa fa-facebook fa-2x"></i></a></li> 
-<?php } ?>  
-   
-<?php if ( get_theme_mod( 'skin_instagram_on_off','1' ) == '1' ) { ?>  
-    <li><a href="<?php echo get_theme_mod( 'skin_instagram_link','#' )?>"><i class="fa fa-instagram fa-2x"></i></a></li>
-<?php } ?> 
+			<?php if ( get_theme_mod( 'skin_facebook_on_off','1' ) == '1' ) { ?>
+			    <li><a href="<?php echo get_theme_mod( 'skin_facebook_link','#' )?>"><i class="fa fa-facebook fa-2x"></i></a></li> 
+			<?php } ?>  
+			   
+			<?php if ( get_theme_mod( 'skin_instagram_on_off','1' ) == '1' ) { ?>  
+			    <li><a href="<?php echo get_theme_mod( 'skin_instagram_link','#' )?>"><i class="fa fa-instagram fa-2x"></i></a></li>
+			<?php } ?> 
 
-<?php if ( get_theme_mod( 'skin_youtube_on_off','1' ) == '1' ) { ?>
-    <li><a href="<?php echo get_theme_mod( 'skin_youtube_link','#' )?>"><i class="fa fa-youtube-play fa-2x"></i></a></li>
-<?php } ?> 
-   
-<?php if ( get_theme_mod( 'skin_linkedin_on_off','0' ) == '1' ) { ?>
-    <li><a href="<?php echo get_theme_mod( 'skin_linkedin_link','#' )?>"><i class="fa fa-linkedin fa-2x"></i></a></li>
-<?php } ?> 
+			<?php if ( get_theme_mod( 'skin_youtube_on_off','1' ) == '1' ) { ?>
+			    <li><a href="<?php echo get_theme_mod( 'skin_youtube_link','#' )?>"><i class="fa fa-youtube-play fa-2x"></i></a></li>
+			<?php } ?> 
+			   
+			<?php if ( get_theme_mod( 'skin_linkedin_on_off','0' ) == '1' ) { ?>
+			    <li><a href="<?php echo get_theme_mod( 'skin_linkedin_link','#' )?>"><i class="fa fa-linkedin fa-2x"></i></a></li>
+			<?php } ?> 
 
-<?php if ( get_theme_mod( 'skin_pinterest_on_off','0' ) == '1' ) { ?>
-    <li><a href="<?php echo get_theme_mod( 'skin_pinterest_link','#' )?>"><i class="fa fa-pinterest fa-2x"></i></a></li>
-<?php } ?> 
+			<?php if ( get_theme_mod( 'skin_pinterest_on_off','0' ) == '1' ) { ?>
+			    <li><a href="<?php echo get_theme_mod( 'skin_pinterest_link','#' )?>"><i class="fa fa-pinterest fa-2x"></i></a></li>
+			<?php } ?> 
 
-<?php if ( get_theme_mod( 'skin_google_plus_on_off','0' ) == '1' ) { ?>  
-    <li><a href="<?php echo get_theme_mod( 'skin_google_plus_link','#' )?>"><i class="fa fa-google-plus fa-2x"></i></a></li>
-<?php } ?> 
+			<?php if ( get_theme_mod( 'skin_google_plus_on_off','0' ) == '1' ) { ?>  
+			    <li><a href="<?php echo get_theme_mod( 'skin_google_plus_link','#' )?>"><i class="fa fa-google-plus fa-2x"></i></a></li>
+			<?php } ?> 
 
-<?php if ( get_theme_mod( 'skin_tumblr_on_off','0' ) == '1' ) { ?>      
-    <li><a href="<?php echo get_theme_mod( 'skin_tumblr_link','#' )?>"><i class="fa fa-tumblr fa-2x"></i></a></li> 
-<?php } ?> 
+			<?php if ( get_theme_mod( 'skin_tumblr_on_off','0' ) == '1' ) { ?>      
+			    <li><a href="<?php echo get_theme_mod( 'skin_tumblr_link','#' )?>"><i class="fa fa-tumblr fa-2x"></i></a></li> 
+			<?php } ?> 
 
-<?php if ( get_theme_mod( 'skin_reddit_on_off','0' ) == '1' ) { ?>    
-    <li><a href="<?php echo get_theme_mod( 'skin_reddit_link','#' )?>"><i class="fa fa-reddit fa-2x"></i></a></li>  
+			<?php if ( get_theme_mod( 'skin_reddit_on_off','0' ) == '1' ) { ?>    
+			    <li><a href="<?php echo get_theme_mod( 'skin_reddit_link','#' )?>"><i class="fa fa-reddit fa-2x"></i></a></li>  
 
-<?php } ?>     
-</ul>
-</div>        
+			<?php } ?>     
+		</ul>
+	</div>        
     <?php }
 }

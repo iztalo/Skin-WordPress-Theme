@@ -453,6 +453,15 @@ if ( ! function_exists('skin_header_menu')) {
 	} 
 }
 
+if ( ! function_exists('skin_mobile_menu')) {
+	function skin_mobile_menu() {
+        wp_nav_menu(array(
+            'theme_location'    => 'skin_mobile',
+            'menu_class'        => 'mobile-menu',
+	        ));
+	} 
+}
+
 /*
  * Social Media Icons for Headers
  *

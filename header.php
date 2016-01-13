@@ -39,24 +39,19 @@
         <?php skin_social_icons(); 
          get_search_form();?> 
         <!-- Menu Section title -->
-        <span>  Navigation Links</span>
-        <!-- First Menu -->
-        <ul>
-            <li><a href="#"><i class="fa fa-home"></i>  Home</a></li>
-            <li><a href="#"><i class="fa fa-picture-o"></i>  Portfolio</a> </li>
-            <li>
-                <!-- Second tier dropdown -->
-                <label for="dropdown-1" class="dropdown-1" ><a  >Blog</a></label>
-                <input type="checkbox" name="menu" id="dropdown-1">
-                <ul id="sub-menu" class="dropdown-1">
-                    <!-- Dropdown links here -->
-                    <li><a href="#"><i class="fa fa-code"></i>  Tutorials</a></li>
-                    <li><a href="#"><i class="fa fa-eye"></i>  Inspiration</a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-user"></i>  About</a></li>
-            <li><a href="#"><i class="fa fa-envelope-o"></i>  Contact</a></li>
-        </ul>
+        <span><?php _e( 'Navigate', 'skin' ); ?></span>
+        <!-- Mobile Menu -->
+
+<?php if ( has_nav_menu( 'skin_mobile' ) ) : ?>
+    <nav id="offset-navigation" class="mobile-navigation" role="navigation" aria-label="<?php _e( 'Navigation Links', 'skin' ); ?>">
+        <?php
+        if ( function_exists( 'skin_mobile_menu' ) ) : 
+        skin_mobile_menu();
+        endif;
+        ?>
+    </nav><!-- .main-navigation -->
+<?php endif; ?>
+        
     </nav> 
 </div>
 <!-- /#menu -->

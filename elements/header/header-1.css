@@ -58,8 +58,7 @@
     font-weight: 400;
     text-transform: uppercase; 
 }
-.header_1 .site-header-menu {
-	display: none; 
+.header_1 .site-header-menu { 
 	-webkit-flex: 0 1 100%;
 	-ms-flex: 0 1 100%;
 	-webkit-box-flex: 0;

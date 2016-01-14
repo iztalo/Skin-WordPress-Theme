@@ -11,24 +11,6 @@
 * Configure Theme Customizer Panel with Kirki 
 */
 if ( class_exists( 'Kirki' ) ) {
-    function skin_customizer_config() {
-
-        $args = array(
-
-            'logo_image'   => get_template_directory_uri() . '/images/logo.png',
-
-            // Only use this if you are bundling the plugin with your theme (see above)
-            // 'url_path'     => get_stylesheet_directory_uri() . '/inc/kirki/',
-
-            'textdomain'   => 'skin',
-
-        );
-
-
-        return $args;
-    }
-    add_filter( 'kirki/config', 'skin_customizer_config' );
-
     /**
     * Add a Customizer Panel and Sections
     */

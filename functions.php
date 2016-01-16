@@ -1,21 +1,28 @@
 <?php 
+/* Automatic Updates Integration - Do theme setup on the 'after_setup_theme' hook. */
+add_action( 'after_setup_theme', 'bowser_theme_setup' );
+
 /**
- * This file represents an example of the code that themes would use to register
- * the required plugins.
- *
- * It is expected that theme authors would copy and paste this code into their
- * functions.php file, and amend to suit.
- *
- * @see http://tgmpluginactivation.com/configuration/ for detailed documentation.
- *
- * @package    TGM-Plugin-Activation
- * @subpackage Example
- * @version    2.5.2
- * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
- * @copyright  Copyright (c) 2011, Thomas Griffin
- * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
- * @link       https://github.com/TGMPA/TGM-Plugin-Activation
+ * Theme setup function.
+ * @since  0.1.0
  */
+function bowser_theme_setup(){
+
+	/* updater args */
+	$updater_args = array(
+		'repo_uri'    => 'http://magazine3.com/updates/',
+		'repo_slug'   => 'skin-theme',
+		'dashboard'   => false,
+		'username'    => false,
+	);
+
+	/* add support for updater */
+	add_theme_support( 'auto-hosted-theme-updater', $updater_args );
+}
+ 
+/* Load Theme Updater */
+require_once( trailingslashit( get_template_directory() ) . 'inc/theme-updater.php' );
+new Bowser_Theme_Updater;
 
 /**
  * Include the TGM_Plugin_Activation class.

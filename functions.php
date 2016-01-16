@@ -571,11 +571,9 @@ if (get_theme_mod('post_area_style_selector', 'skin_1') === 'skin_3') {
 	wp_enqueue_style( 'home_layout_style_3', get_template_directory_uri() . '/elements/home-layout/layout-3.css', array() );
     }
 
-    // Load Google fonts only if Kirki is not activated
-    if ( ! class_exists( 'Kirki' ) ) {
-	    // Adding google fonts. Added at in end for performance in mind. Site should not wait for Google fonts to load.
-	    wp_enqueue_style( 'skin-google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,500,700', false ); 
-	}
+   
+    // Adding google fonts. 
+    wp_enqueue_style( 'skin-google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,500,700', false ); 
 
      
 // Loading Scripts for the theme 

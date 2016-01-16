@@ -660,7 +660,7 @@ if ( class_exists( 'Kirki' ) ) {
         $fields[] = array(
             'type'      => 'slider',
             'settings'  => 'base_typography_font_size',
-            'label'     => __( 'Font Size', 'example' ),
+            'label'     => __( 'Font Size', 'skin' ),
             'section'   => 'skin_typography_settings',
             'default'   => 22,
             'priority'  => 25,

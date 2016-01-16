@@ -5,19 +5,19 @@
  * @since Skin 1.0
  */
 ?>
-<div class="content_loop">
+<div class="content_loop blog-layout-3">
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post();  ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="blog_post">
                 <?php if ( has_post_thumbnail() ) { ?>
-                <div class="blog_post_img col-md-4">
+                <div class="blog_post_img col-md-4 col-xs-4">
                     <a href="<?php the_permalink() ?>">
                         <?php the_post_thumbnail('content_one_thumb' ); ?>
                     </a>
                 </div> 
                 <?php } else { } ?> 
-                <div class="blog_post_content <?php if ( has_post_thumbnail() ) { ?> col-md-8 <?php } else { ?> col-md-12 <?php } ?>">
+                <div class="blog_post_content <?php if ( has_post_thumbnail() ) { ?> col-md-8 col-xs-8 <?php } else { ?> col-md-12 col-xs-12 <?php } ?>">
                     <div class="blog_post_cat"><?php the_category(', ') ?></div>
                     <h2>
                         <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"> <?php the_title(); ?></a>

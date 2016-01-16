@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
  * This file represents an example of the code that themes would use to register
  * the required plugins.
@@ -49,8 +49,8 @@ function my_theme_register_required_plugins() {
 		// and not in a subdirectory ('/src') of the repository.
 		array(
 			'name'      => 'Skin Toolkit',
-			'slug'      => 'Skin-Toolkit-master',
-			'source'    => 'https://github.com/TheSkin/Skin-Toolkit/archive/master.zip',
+			'slug'      => 'Skin-Toolkit-0.2',
+			'source'    => 'https://github.com/TheSkin/Skin-Toolkit/archive/0.2.zip',
 		)
 	);
 

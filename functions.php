@@ -49,8 +49,8 @@ function my_theme_register_required_plugins() {
 		// and not in a subdirectory ('/src') of the repository.
 		array(
 			'name'      => 'Skin Toolkit',
-			'slug'      => 'Skin-Toolkit-0.2',
-			'source'    => 'https://github.com/TheSkin/Skin-Toolkit/archive/0.2.zip',
+			'slug'      => 'skin-toolkit-plugin-master',
+			'source'    => 'https://github.com/TheSkin/skin-toolkit-plugin/archive/master.zip',
 		)
 	);
 
@@ -72,7 +72,7 @@ function my_theme_register_required_plugins() {
 		'has_notices'  => true,                    // Show admin notices or not.
 		'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
 		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+		'is_automatic' => true,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
 
 		/*

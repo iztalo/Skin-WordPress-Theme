@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row"> 
 
-                <div class="col-md-4 logo">
+                <div class="col-md-4 col-sm-4 logo">
                     <?php if ( get_theme_mod( 'header_logo' ) ) : ?>
                 <a href="<?php echo  esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_theme_mod( 'header_logo' ) ; ?>" alt="<?php bloginfo('name'); ?>" /></a>
               <?php else : ?>
@@ -18,7 +18,7 @@
               <?php } endif; ?>
                 </div>
 
-                <div class="col-md-8 search-area">
+                <div class="col-md-8 col-sm-8 search-area">
                     <div class="header-search"> <?php get_search_form();?> </div>
                      <?php
                     // Social Icons

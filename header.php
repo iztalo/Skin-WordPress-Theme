@@ -20,7 +20,45 @@
 
 <body <?php body_class(); ?>>
 
-  
+
+
+
+<!-- Checkbox to show/hide the navigation menu -->
+<input type="checkbox" name="menu" value="toggle" id="toggle">
+ 
+<!-- navigation menu container -->
+ 
+<div id="off-canvas-menu">
+ 
+   <!-- Lable for #showmenu to hide the menu/uncheck the checkbox -->
+   <label class="toggle" for="toggle"><i class="fa fa-2x fa-bars"></i></label>
+ 
+   <!-- Menu content -->
+ 
+    <nav class="menu-content">
+        <?php skin_social_icons(); 
+         get_search_form();?> 
+        <!-- Menu Section title -->
+        <span><?php _e( 'Navigate', 'skin' ); ?></span>
+        <!-- Mobile Menu -->
+
+<?php if ( has_nav_menu( 'skin_mobile' ) ) : ?>
+    <nav id="offset-navigation" class="mobile-navigation" role="navigation" aria-label="<?php _e( 'Navigation Links', 'skin' ); ?>">
+        <?php
+        if ( function_exists( 'skin_mobile_menu' ) ) : 
+        skin_mobile_menu();
+        endif;
+        ?>
+    </nav><!-- .main-navigation -->
+<?php endif; ?>
+        
+    </nav> 
+</div>
+<!-- /#menu -->
+
+    
+
+
 <?php 
     if (get_theme_mod('header_style_selector', 'skin_1') === 'skin_1') {  
     get_template_part( 'elements/header/header', '1' ); 

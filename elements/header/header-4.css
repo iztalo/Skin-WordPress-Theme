@@ -22,6 +22,7 @@
 }
 .header_4 .search-area{
     padding-right: 0px; 
+    padding-left: 3%;
 }
 /* Search Area */
 .header_4 .header-search {
@@ -35,8 +36,7 @@
 .search-field {
     border-color: #BABDBE !important;
     border-width: 1px 0px 1px 1px; 
-    float: none;
-    width: 168px !important;
+    float: none; 
     font-family: 'Roboto', sans-serif !important;
     height: 32px;
     font-size: 12px !important;
@@ -51,6 +51,9 @@
     letter-spacing: 1px;
     font-weight: 300; 
     text-transform: uppercase;
+}
+.header-search .search-field, .widget_search .search-field {
+    width: 168px ;
 }
 .search-submit{
     float: right;
@@ -85,8 +88,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400; 
 }
-.header_4 .site-header-menu {
-	display: none;
+.header_4 .site-header-menu { 
 	-webkit-flex: 0 1 100%;
 	-ms-flex: 0 1 100%;
 	-webkit-box-flex: 0;
@@ -95,7 +97,7 @@
 }
 
 .header_4 .site-header-menu.toggled-on,
-.no-js .site-header-menu {
+.site-header-menu {
 	display: block;
 }
 
@@ -107,12 +109,13 @@
 }
 
 .header_4 .main-navigation ul {
-	list-style: none;
+	list-style-type: none;
 	margin: 0;
 }
 
 .header_4 .main-navigation li {
-	border-top: 1px solid #d1d1d1;
+    list-style-type: none;
+    border-top: 1px solid #d1d1d1;
 	position: relative;
 } 
 
@@ -123,6 +126,7 @@
 
 .header_4 .main-navigation ul ul {
 	display: none;
+    background: #444
 	margin-left: 0.875em;
 }
 
@@ -139,7 +143,7 @@
 }
 
 .header_4 .main-navigation .menu-item-has-children > a {
-	margin-right: 56px;
+    padding-right: 14px !important;
 }
 
 .header_4 .dropdown-toggle {
@@ -202,7 +206,8 @@
 }
 
 .header_4 .main-navigation .primary-menu > li { 
-    display: inline-block
+    display: inline-block;
+    margin-right: 3px;
 } 
 .header_4 .main-navigation .primary-menu > li a:hover, .header_4 .main-navigation .primary-menu > li:hover{
     color: #49A942;
@@ -210,22 +215,30 @@
 }
 .header_4 .main-navigation a {
     outline-offset: -8px;
-    padding: 0px 14px;
+    padding: 0px 14px 10px 14px;
     white-space: nowrap;
     font-size: 16px;
     display: block;
     text-transform: uppercase;
     font-weight: 400;
     color: #333;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
+    
 }
 .header_4 .main-navigation ul ul {
-    border-bottom: 1px solid #d1d1d1;
+    -webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+        -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
     display: block;
     left: -999em;
     margin: 0;
     position: absolute;
-    z-index: 99999;
+    z-index: 99999; 
+    background: #444;
+    width: 190px;
 }
 .header_4 .main-navigation ul ul ul {
     top: -1px;
@@ -235,14 +248,27 @@
     border: 0;
 }
 .header_4 .main-navigation ul ul li {
-    background-color: #fff;
-    border: 1px solid #d1d1d1;
-    border-bottom-width: 0;
+   border-bottom-width: 0;
+    border: 0px solid #d1d1d1;
 }
 .header_4 .main-navigation ul ul a {
-    white-space: normal;
-    width: 12.6875em;
-	color: #1a1a1a;
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+       white-space: normal;
+    color: #eee;
+    font-size: 14px;
+    padding: 14px 19px;
+    line-height: 1;
+    text-transform: none;
+    text-align: left
+}
+.header_4 .main-navigation ul ul li:hover > ul{
+    right: -175px !important;
+    background:rgb(99, 99, 99);
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
 }
 .header_4 .main-navigation ul ul:before,
 .header_4 .main-navigation ul ul:after {
@@ -251,21 +277,15 @@
     position: absolute;
 }
 .header_4 .main-navigation ul ul:before {
-    border-color: #d1d1d1 transparent;
+    border-color: #444 transparent;
     border-width: 0 10px 10px;
     right: 9px;
     top: -9px;
-}
-.header_4 .main-navigation ul ul:after {
-    border-color: #fff transparent;
-    border-width: 0 8px 8px;
-    right: 11px;
-    top: -7px;
-}
+} 
 .header_4 .main-navigation li:hover > ul,
 .header_4 .main-navigation li.focus > ul {
     left: auto;
-    right: 0;
+    right: -13px;
 }
 .header_4 .main-navigation ul ul li:hover > ul,
 .header_4 .main-navigation ul ul li.focus > ul {
@@ -273,27 +293,50 @@
     right: 100%;
 }
 .header_4 .main-navigation .menu-item-has-children > a {
-    margin: 0;
-    padding-right: 2.25em;
+    margin: 0; 
+    padding-bottom: 10px;
 }
 .header_4 .main-navigation .menu-item-has-children > a:after {
-    content: "\f0dd"; 
-    font-family:FontAwesome;
+    content: "\f0dd";
+    font-family: FontAwesome;
     position: absolute;
-    right: 0.625em;
-    top: 10px;
+    color: #999;
+    top: 1px;
+    font-size: 11px;
+    margin-left: 6px;
 }
 .header_4 .main-navigation ul ul .menu-item-has-children > a {
     padding-right: 2.0625em;
+    font-size: 14px;
+    text-transform: none;
 }
 .header_4 .main-navigation ul ul .menu-item-has-children > a:after {
-    right: 0.5625em;
-    top: 10px;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+     right: 1em;
+    top: 16px;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
 }
-
+.header_4 .mega-menu-holder ul{
+    background: #fff !important;
+    width: 100% !important;
+    text-align: left
+}
+.mega-menu-holder{
+    top: 30px !important;
+    border: 5px solid #485058 !important;
+}
+.mega_menu_parent > a:after{
+    color: #555 !important
+}
+.menu-wrapper .main-navigation .mega-menu-holder ul:after{
+    border-width: 0px !important;
+    color: #fff !important
+    
+}
+.menu-wrapper .main-navigation .mega-menu-holder ul li figcaption{
+    width: 75%;
+}
 .header_4 .dropdown-toggle,
 .header_4 .main-navigation ul .dropdown-toggle.toggled-on,
 .header_4 .menu-toggle,
@@ -302,10 +345,18 @@
     display: none;
 }
 
+/* Black dropdown */
+  
+.header_4 .main-navigation ul ul a{
+    color: #eee 
+}
 /*
- Social Icons 
-
+ Social Icons */
 .header_4 .social-icons{
+    float: left; 
+    margin-top: 20px;
+}
+/*.header_4 .social-icons{
     margin-top: 17px;
     float: left
 }

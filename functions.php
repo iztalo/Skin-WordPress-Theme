@@ -1,13 +1,168 @@
 <?php 
+/* Automatic Updates Integration - Do theme setup on the 'after_setup_theme' hook. */
+add_action( 'after_setup_theme', 'bowser_theme_setup' );
 
-function responsive_style() {
-    
-	// Add Responsive Style 
-	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/responsive.css', array() );
-    
+/**
+ * Theme setup function.
+ * @since  0.1.0
+ */
+function bowser_theme_setup(){
+
+	/* updater args */
+	$updater_args = array(
+		'repo_uri'    => 'http://magazine3.com/updates/',
+		'repo_slug'   => 'skin-theme',
+		'dashboard'   => false,
+		'username'    => false,
+	);
+
+	/* add support for updater */
+	add_theme_support( 'auto-hosted-theme-updater', $updater_args );
 }
+ 
+/* Load Theme Updater */
+require_once( trailingslashit( get_template_directory() ) . 'inc/theme-updater.php' );
+new Bowser_Theme_Updater;
 
-add_action('wp_footer','responsive_style');
+/**
+ * Include the TGM_Plugin_Activation class.
+ */
+require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
+
+add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
+/**
+ * Register the required plugins for this theme.
+ *
+ * In this example, we register five plugins:
+ * - one included with the TGMPA library
+ * - two from an external source, one from an arbitrary source, one from a GitHub repository
+ * - two from the .org repo, where one demonstrates the use of the `is_callable` argument
+ *
+ * The variable passed to tgmpa_register_plugins() should be an array of plugin
+ * arrays.
+ *
+ * This function is hooked into tgmpa_init, which is fired within the
+ * TGM_Plugin_Activation class constructor.
+ */
+function my_theme_register_required_plugins() {
+	/*
+	 * Array of plugin arrays. Required keys are name and slug.
+	 * If the source is NOT from the .org repo, then source is also required.
+	 */
+	$plugins = array(
+
+		// This is an example of how to include a plugin from a GitHub repository in your theme.
+		// This presumes that the plugin code is based in the root of the GitHub repository
+		// and not in a subdirectory ('/src') of the repository.
+		array(
+			'name'      => 'Skin Toolkit',
+			'slug'      => 'skin-toolkit-plugin-master',
+			'source'    => 'https://github.com/TheSkin/skin-toolkit-plugin/archive/master.zip',
+		)
+	);
+
+	/*
+	 * Array of configuration settings. Amend each line as needed.
+	 *
+	 * TGMPA will start providing localized text strings soon. If you already have translations of our standard
+	 * strings available, please help us make TGMPA even better by giving us access to these translations or by
+	 * sending in a pull-request with .po file(s) with the translations.
+	 *
+	 * Only uncomment the strings in the config array if you want to customize the strings.
+	 */
+	$config = array(
+		'id'           => 'tgmpa',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'default_path' => '',                      // Default absolute path to bundled plugins.
+		'menu'         => 'tgmpa-install-plugins', // Menu slug.
+		'parent_slug'  => 'themes.php',            // Parent menu slug.
+		'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
+		'has_notices'  => true,                    // Show admin notices or not.
+		'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
+		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
+		'is_automatic' => true,                   // Automatically activate plugins after installation or not.
+		'message'      => '',                      // Message to output right before the plugins table.
+
+		/*
+		'strings'      => array(
+			'page_title'                      => __( 'Install Required Plugins', 'theme-slug' ),
+			'menu_title'                      => __( 'Install Plugins', 'theme-slug' ),
+			'installing'                      => __( 'Installing Plugin: %s', 'theme-slug' ), // %s = plugin name.
+			'oops'                            => __( 'Something went wrong with the plugin API.', 'theme-slug' ),
+			'notice_can_install_required'     => _n_noop(
+				'This theme requires the following plugin: %1$s.',
+				'This theme requires the following plugins: %1$s.',
+				'theme-slug'
+			), // %1$s = plugin name(s).
+			'notice_can_install_recommended'  => _n_noop(
+				'This theme recommends the following plugin: %1$s.',
+				'This theme recommends the following plugins: %1$s.',
+				'theme-slug'
+			), // %1$s = plugin name(s).
+			'notice_cannot_install'           => _n_noop(
+				'Sorry, but you do not have the correct permissions to install the %1$s plugin.',
+				'Sorry, but you do not have the correct permissions to install the %1$s plugins.',
+				'theme-slug'
+			), // %1$s = plugin name(s).
+			'notice_ask_to_update'            => _n_noop(
+				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
+				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
+				'theme-slug'
+			), // %1$s = plugin name(s).
+			'notice_ask_to_update_maybe'      => _n_noop(
+				'There is an update available for: %1$s.',
+				'There are updates available for the following plugins: %1$s.',
+				'theme-slug'
+			), // %1$s = plugin name(s).
+			'notice_cannot_update'            => _n_noop(
+				'Sorry, but you do not have the correct permissions to update the %1$s plugin.',
+				'Sorry, but you do not have the correct permissions to update the %1$s plugins.',
+				'theme-slug'
+			), // %1$s = plugin name(s).
+			'notice_can_activate_required'    => _n_noop(
+				'The following required plugin is currently inactive: %1$s.',
+				'The following required plugins are currently inactive: %1$s.',
+				'theme-slug'
+			), // %1$s = plugin name(s).
+			'notice_can_activate_recommended' => _n_noop(
+				'The following recommended plugin is currently inactive: %1$s.',
+				'The following recommended plugins are currently inactive: %1$s.',
+				'theme-slug'
+			), // %1$s = plugin name(s).
+			'notice_cannot_activate'          => _n_noop(
+				'Sorry, but you do not have the correct permissions to activate the %1$s plugin.',
+				'Sorry, but you do not have the correct permissions to activate the %1$s plugins.',
+				'theme-slug'
+			), // %1$s = plugin name(s).
+			'install_link'                    => _n_noop(
+				'Begin installing plugin',
+				'Begin installing plugins',
+				'theme-slug'
+			),
+			'update_link' 					  => _n_noop(
+				'Begin updating plugin',
+				'Begin updating plugins',
+				'theme-slug'
+			),
+			'activate_link'                   => _n_noop(
+				'Begin activating plugin',
+				'Begin activating plugins',
+				'theme-slug'
+			),
+			'return'                          => __( 'Return to Required Plugins Installer', 'theme-slug' ),
+			'plugin_activated'                => __( 'Plugin activated successfully.', 'theme-slug' ),
+			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'theme-slug' ),
+			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'theme-slug' ),  // %1$s = plugin name(s).
+			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'theme-slug' ),  // %1$s = plugin name(s).
+			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'theme-slug' ), // %s = dashboard link.
+			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'tgmpa' ),
+
+			'nag_type'                        => 'updated', // Determines admin notice type - can only be 'updated', 'update-nag' or 'error'.
+		),
+		*/
+	);
+
+	tgmpa( $plugins, $config );
+}
 
 // WooCommerce Support
 add_action( 'after_setup_theme', 'woocommerce_support' );
@@ -159,12 +314,19 @@ add_action( 'widgets_init', 'skin_theme_widgets_init' );
  * @since Skin 1.0
 */
 function add_layout_class( $classes ) {
-      if ( '2' === get_theme_mod( 'sidebar_switch' ) ) {
-       // array_push( $classes, 'layout-1' );
-      } // end if
-    
-    array_push( $classes, 'layout-1' );
-    
+
+if (get_theme_mod('header_style_selector', 'skin_1') === 'skin_1') {
+	array_push( $classes, 'header-style-1' );
+ }
+if (get_theme_mod('header_style_selector', 'skin_1') === 'skin_2') {  
+	array_push( $classes, 'header-style-2' );
+}
+if (get_theme_mod('header_style_selector', 'skin_1') === 'skin_3') {  
+	array_push( $classes, 'header-style-3' );
+}
+if (get_theme_mod('header_style_selector', 'skin_1') === 'skin_4') {  
+	array_push( $classes, 'header-style-4' ); 
+}
     return $classes;
 }
 add_filter('body_class', 'add_layout_class');
@@ -407,10 +569,13 @@ if (get_theme_mod('post_area_style_selector', 'skin_1') === 'skin_2') {
       }
 if (get_theme_mod('post_area_style_selector', 'skin_1') === 'skin_3') { 
 	wp_enqueue_style( 'home_layout_style_3', get_template_directory_uri() . '/elements/home-layout/layout-3.css', array() );
-      }
-    
-    // Adding google fonts. Added at in end for performance in mind. Site should not wait for Google fonts to load.
-    wp_enqueue_style( 'skin-google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,500,700', false ); 
+    }
+
+    // Load Google fonts only if Kirki is not activated
+    if ( ! class_exists( 'Kirki' ) ) {
+	    // Adding google fonts. Added at in end for performance in mind. Site should not wait for Google fonts to load.
+	    wp_enqueue_style( 'skin-google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,500,700', false ); 
+	}
 
      
 // Loading Scripts for the theme 
@@ -418,10 +583,11 @@ if (get_theme_mod('post_area_style_selector', 'skin_1') === 'skin_3') {
     // Loading BootStarp.min.js 
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() .'/assets/js/bootstrap.min.js', array('jquery'), 1.0, true);
     
-    // Load Script only on HomePage for Swiper Slider
-    if(is_home()){
-        wp_enqueue_script( 'swiperslider', get_template_directory_uri() .'/assets/js/swiper.min.js', array('jquery'), 1.0, true);
-        }
+    // Load Script for Swiper Slider
+    wp_enqueue_script( 'swiperslider', get_template_directory_uri() .'/assets/js/swiper.min.js', array('jquery'), 1.0, true);
+
+    // Load scripts.js to run custom functions
+    wp_enqueue_script( 'custom-js', get_template_directory_uri() .'/assets/js/custom.js', array('jquery'), 1.0, true);
     
      // Load Script only on Singular Pages where Comment Form is loaded.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -446,6 +612,14 @@ if ( ! function_exists('skin_header_menu')) {
 	} 
 }
 
+if ( ! function_exists('skin_mobile_menu')) {
+	function skin_mobile_menu() {
+        wp_nav_menu(array(
+            'theme_location'    => 'skin_mobile',
+            'menu_class'        => 'mobile-menu',
+	        ));
+	} 
+}
 
 /*
  * Social Media Icons for Headers
@@ -456,45 +630,45 @@ if ( ! function_exists('skin_header_menu')) {
 if( ! function_exists( 'skin_social_icons' ) ){
     function skin_social_icons() { 
         $icon_style = get_theme_mod('skin_icon_style','icon_type_round'); ?>
-<div class="social-icons <?php echo $icon_style; ?>">
-<ul>
-<?php if ( get_theme_mod( 'skin_twitter_on_off','1' ) == '1' ) { ?>
-    <li><a href="<?php echo get_theme_mod( 'skin_twitter_link','#' )?>"><i class="fa fa-twitter fa-2x"></i></a></li>
-<?php } ?>
+	<div class="social-icons <?php echo $icon_style; ?>">
+		<ul>
+			<?php if ( get_theme_mod( 'skin_twitter_on_off','1' ) == '1' ) { ?>
+			    <li><a href="<?php echo get_theme_mod( 'skin_twitter_link','#' )?>"><i class="fa fa-twitter fa-2x"></i></a></li>
+			<?php } ?>
 
-<?php if ( get_theme_mod( 'skin_facebook_on_off','1' ) == '1' ) { ?>
-    <li><a href="<?php echo get_theme_mod( 'skin_facebook_link','#' )?>"><i class="fa fa-facebook fa-2x"></i></a></li> 
-<?php } ?>  
-   
-<?php if ( get_theme_mod( 'skin_instagram_on_off','1' ) == '1' ) { ?>  
-    <li><a href="<?php echo get_theme_mod( 'skin_instagram_link','#' )?>"><i class="fa fa-instagram fa-2x"></i></a></li>
-<?php } ?> 
+			<?php if ( get_theme_mod( 'skin_facebook_on_off','1' ) == '1' ) { ?>
+			    <li><a href="<?php echo get_theme_mod( 'skin_facebook_link','#' )?>"><i class="fa fa-facebook fa-2x"></i></a></li> 
+			<?php } ?>  
+			   
+			<?php if ( get_theme_mod( 'skin_instagram_on_off','1' ) == '1' ) { ?>  
+			    <li><a href="<?php echo get_theme_mod( 'skin_instagram_link','#' )?>"><i class="fa fa-instagram fa-2x"></i></a></li>
+			<?php } ?> 
 
-<?php if ( get_theme_mod( 'skin_youtube_on_off','1' ) == '1' ) { ?>
-    <li><a href="<?php echo get_theme_mod( 'skin_youtube_link','#' )?>"><i class="fa fa-youtube-play fa-2x"></i></a></li>
-<?php } ?> 
-   
-<?php if ( get_theme_mod( 'skin_linkedin_on_off','0' ) == '1' ) { ?>
-    <li><a href="<?php echo get_theme_mod( 'skin_linkedin_link','#' )?>"><i class="fa fa-linkedin fa-2x"></i></a></li>
-<?php } ?> 
+			<?php if ( get_theme_mod( 'skin_youtube_on_off','1' ) == '1' ) { ?>
+			    <li><a href="<?php echo get_theme_mod( 'skin_youtube_link','#' )?>"><i class="fa fa-youtube-play fa-2x"></i></a></li>
+			<?php } ?> 
+			   
+			<?php if ( get_theme_mod( 'skin_linkedin_on_off','0' ) == '1' ) { ?>
+			    <li><a href="<?php echo get_theme_mod( 'skin_linkedin_link','#' )?>"><i class="fa fa-linkedin fa-2x"></i></a></li>
+			<?php } ?> 
 
-<?php if ( get_theme_mod( 'skin_pinterest_on_off','0' ) == '1' ) { ?>
-    <li><a href="<?php echo get_theme_mod( 'skin_pinterest_link','#' )?>"><i class="fa fa-pinterest fa-2x"></i></a></li>
-<?php } ?> 
+			<?php if ( get_theme_mod( 'skin_pinterest_on_off','0' ) == '1' ) { ?>
+			    <li><a href="<?php echo get_theme_mod( 'skin_pinterest_link','#' )?>"><i class="fa fa-pinterest fa-2x"></i></a></li>
+			<?php } ?> 
 
-<?php if ( get_theme_mod( 'skin_google_plus_on_off','0' ) == '1' ) { ?>  
-    <li><a href="<?php echo get_theme_mod( 'skin_google_plus_link','#' )?>"><i class="fa fa-google-plus fa-2x"></i></a></li>
-<?php } ?> 
+			<?php if ( get_theme_mod( 'skin_google_plus_on_off','0' ) == '1' ) { ?>  
+			    <li><a href="<?php echo get_theme_mod( 'skin_google_plus_link','#' )?>"><i class="fa fa-google-plus fa-2x"></i></a></li>
+			<?php } ?> 
 
-<?php if ( get_theme_mod( 'skin_tumblr_on_off','0' ) == '1' ) { ?>      
-    <li><a href="<?php echo get_theme_mod( 'skin_tumblr_link','#' )?>"><i class="fa fa-tumblr fa-2x"></i></a></li> 
-<?php } ?> 
+			<?php if ( get_theme_mod( 'skin_tumblr_on_off','0' ) == '1' ) { ?>      
+			    <li><a href="<?php echo get_theme_mod( 'skin_tumblr_link','#' )?>"><i class="fa fa-tumblr fa-2x"></i></a></li> 
+			<?php } ?> 
 
-<?php if ( get_theme_mod( 'skin_reddit_on_off','0' ) == '1' ) { ?>    
-    <li><a href="<?php echo get_theme_mod( 'skin_reddit_link','#' )?>"><i class="fa fa-reddit fa-2x"></i></a></li>  
+			<?php if ( get_theme_mod( 'skin_reddit_on_off','0' ) == '1' ) { ?>    
+			    <li><a href="<?php echo get_theme_mod( 'skin_reddit_link','#' )?>"><i class="fa fa-reddit fa-2x"></i></a></li>  
 
-<?php } ?>     
-</ul>
-</div>        
+			<?php } ?>     
+		</ul>
+	</div>        
     <?php }
 }

@@ -19,7 +19,7 @@ msgstr ""
 #: 404.php:18
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
-
+la
 #: 404.php:21
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
@@ -82,6 +82,10 @@ msgstr ""
 #: elements/home-layout/layout-1.php:49 elements/home-layout/layout-2.php:52
 #: elements/home-layout/layout-3.php:47
 msgid "Sorry, but you are looking for something that isn't here."
+msgstr ""
+
+#: elements/home-layout/layout-1.php:68
+msgid "About"
 msgstr ""
 
 #: elements/home-layout/layout-2.php:16

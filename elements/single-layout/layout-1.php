@@ -65,7 +65,7 @@
 
             printf( '<span class="byline"><span class="author vcard">%1$s<span class="screen-reader-text">%2$s </span> <a class="url fn n" href="%3$s">%4$s</a></span></span>',
                 get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size ),
-                _x( 'About', 'Used before post author name.', 'skin' ),
+                __( 'About', 'skin' ),
                 esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
                 get_the_author()); ?>
                 <div class="author-bio"><?php echo $user_description ?></div>
